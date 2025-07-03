@@ -29,27 +29,27 @@ The night sky has fascinated humanity for millennia. We created **Celestial Trac
 
 ### 🌠 Astronomical Events View  
 Displays key upcoming celestial events like eclipses and meteor showers.  
-![Astronomical Events](./assets/images/astronomicalevents.png)
+![Astronomical Events](assets/images/astronomicalevents.png)
 
 ### 🗓 Calendar View  
 Interactive event calendar with celestial highlights.  
-![Calendar](./assets/images/calendar.jpg)
+![Calendar](assets/images/calendar.jpg)
 
 ### 🔔 Reminders and Alerts  
 Get notified about major cosmic happenings.  
-![Reminders](./assets/images/reminders.jpg)
+![Reminders](assets/images/reminders.jpg)
 
 ### ⚙️ Settings Panel  
 Configure your location, time zone, and display preferences.  
-![Settings](./assets/images/settings.jpg)
+![Settings](assets/images/settings.jpg)
 
 ### 🤖 Space Chatbot  
 Ask astronomy-related questions and receive intelligent responses.  
-![Space Chatbot](./assets/images/spacechatbot.png)
+![Space Chatbot](assets/images/spacechatbot.png)
 
 ### 🔍 Detailed Event View  
 Learn more about each event, with visuals and observation tips.  
-![Event Details](./assets/images/viewdetails.png)
+![Event Details](assets/images/viewdetails.png)
 
 ---
 
@@ -62,9 +62,10 @@ const stack = {
   core: "React + Vite",
   ui: "Material-UI with custom space theme",
   state: "Context API + React Query",
-  routing: "React Router 6", 
+  routing: "React Router 6",
+  animations: "CSS keyframes + Framer Motion",
+  visualization: "D3.js for celestial charts"
 }
-
 
 Developed By : 
 -Jyoti Fabiyani
