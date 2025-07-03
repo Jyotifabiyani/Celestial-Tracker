@@ -1,0 +1,189 @@
+/* Layout core */
+#root {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 2rem;
+  text-align: center;
+}
+
+/* Logo animation */
+.logo {
+  height: 6em;
+  padding: 1.5em;
+  will-change: filter;
+  transition: filter 300ms;
+}
+.logo:hover {
+  filter: drop-shadow(0 0 2em #646cffaa);
+}
+.logo.react:hover {
+  filter: drop-shadow(0 0 2em #61dafbaa);
+}
+@keyframes logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+@media (prefers-reduced-motion: no-preference) {
+  a:nth-of-type(2) .logo {
+    animation: logo-spin infinite 20s linear;
+  }
+}
+
+/* Card layout */
+.card {
+  padding: 2em;
+}
+.read-the-docs {
+  color: #888;
+}
+
+/* Grid-based layout */
+.events-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 24px;
+}
+
+/* Flex-based layout fallback */
+.events-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 24px;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 40px 20px;
+}
+.event-item {
+  flex: 1 1 280px;
+  max-width: 100%;
+}
+
+/* Event Card */
+.event-card {
+  display: flex;
+  flex-direction: column;
+  background: rgba(255, 255, 255, 0.9); /* glass effect */
+  backdrop-filter: blur(3px);
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  height: 100%;
+}
+.event-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 12px 25px rgba(0, 0, 0, 0.15);
+}
+.event-image {
+  width: 100%;
+  height: 220px;
+  object-fit: cover;
+  border-bottom: 1px solid #eee;
+  border-radius: 0;
+  margin-bottom: 0;
+}
+.event-content {
+  padding: 20px;
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+}
+.event-title {
+  margin: 0 0 12px;
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: #2c3e50;
+}
+.event-meta {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 15px;
+}
+.event-type {
+  background: #3498db;
+  color: white;
+  padding: 4px 10px;
+  border-radius: 20px;
+  font-size: 0.8rem;
+  font-weight: 500;
+}
+.event-date {
+  color: #7f8c8d;
+  font-size: 0.9rem;
+  font-weight: 500;
+}
+.event-description {
+  margin: 0;
+  color: #34495e;
+  font-size: 0.95rem;
+  line-height: 1.5;
+  flex-grow: 1;
+}
+.page-title {
+  text-align: center;
+  margin-bottom: 40px;
+  color: #ffffff;
+  font-weight: 700;
+}
+
+/* Responsive image heights */
+@media (max-width: 900px) {
+  .event-image {
+    height: 180px;
+  }
+}
+@media (max-width: 600px) {
+  .event-image {
+    height: 160px;
+  }
+  .event-meta {
+    flex-direction: column;
+    gap: 8px;
+  }
+}
+
+/* Scrollbar styling */
+::-webkit-scrollbar {
+  width: 10px;
+}
+::-webkit-scrollbar-track {
+  background: #1e1e1e;
+}
+::-webkit-scrollbar-thumb {
+  background: #3f51b5;
+  border-radius: 5px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #303f9f;
+}
+
+/* 🌌 Brighter space background */
+body {
+  margin: 0;
+  padding: 0;
+  background-image: url('https://images.unsplash.com/photo-1532298229144-0ec0c57515c7?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80');
+  background-size: cover;
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-color: #000;
+  color: #fff;
+}
+
+/* ✨ Visible star overlay pattern */
+body::before {
+  content: "";
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url('https://www.transparenttextures.com/patterns/dark-matter.png');
+  opacity: 0.4;
+  pointer-events: none;
+  z-index: -1;
+}
